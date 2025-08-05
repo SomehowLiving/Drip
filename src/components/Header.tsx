@@ -1,7 +1,3 @@
-// ==========================================
-// Enhanced Header Component
-// ==========================================
-
 import { Button } from "@/components/ui/button";
 import { Code, Github, Menu, X, ExternalLink, Sparkles, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -72,7 +68,7 @@ export const Header = () => {
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
-                ComponentStyler
+                Drip
               </span>
               <span className="text-xs text-muted-foreground -mt-1 hidden sm:block">
                 AI-Powered Styling
@@ -102,7 +98,7 @@ export const Header = () => {
               variant="ghost" 
               size="sm" 
               className="hidden md:flex group hover:bg-secondary"
-              onClick={() => window.open('https://github.com/your-repo', '_blank')}
+              onClick={() => window.open('https://github.com/somehowliving', '_blank')}
             >
               <Github className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
               <span>GitHub</span>
@@ -175,7 +171,7 @@ export const Header = () => {
                   variant="ghost" 
                   size="sm" 
                   className="w-full justify-start group"
-                  onClick={() => window.open('https://github.com/your-repo', '_blank')}
+                  onClick={() => window.open('https://github.com/somehowliving', '_blank')}
                 >
                   <Github className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
                   <span>View on GitHub</span>

@@ -1,0 +1,51 @@
+[
+  {
+    "id": "clean",
+    "name": "Clean",
+    "description": "Google-inspired minimalism",
+    "preview": "bg-blue-500 hover:bg-blue-600 text-white shadow-sm",
+    "color": "blue",
+    "popular": true,
+    "tags": ["minimal", "google", "corporate"]
+  },
+  {
+    "id": "soft",
+    "name": "Soft",
+    "description": "Gentle curves and pastel colors",
+    "preview": "bg-purple-100 hover:bg-purple-200 text-purple-700 shadow-lg border border-purple-200",
+    "color": "purple",
+    "tags": ["friendly", "approachable", "rounded"]
+  },
+  {
+    "id": "dark",
+    "name": "Dark",
+    "description": "Modern dark theme",
+    "preview": "bg-gray-900 hover:bg-gray-800 text-white border border-gray-700",
+    "color": "gray",
+    "tags": ["modern", "sleek", "professional"]
+  },
+  {
+    "id": "gradient",
+    "name": "Gradient",
+    "description": "Vibrant gradient styles",
+    "preview": "bg-gradient-to-r from-orange-400 to-pink-500 text-white shadow-lg",
+    "color": "gradient",
+    "tags": ["vibrant", "modern", "eye-catching"]
+  },
+  {
+    "id": "glass",
+    "name": "Glass",
+    "description": "Glassmorphism effect",
+    "preview": "bg-white/20 backdrop-blur-md border border-white/30 text-gray-800 shadow-xl",
+    "color": "glass",
+    "tags": ["trendy", "translucent", "modern"]
+  },
+  {
+    "id": "neon",
+    "name": "Neon",
+    "description": "Cyberpunk-inspired glow",
+    "preview": "bg-black border border-cyan-400 text-cyan-400 shadow-lg shadow-cyan-400/20",
+    "color": "cyan",
+    "tags": ["cyberpunk", "futuristic", "glow"]
+  }
+]

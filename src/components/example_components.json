@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Simple Button",
+    "description": "Basic button component",
+    "code": "const Button = ({ children }) => {\n  return <button>{children}</button>;\n};",
+    "complexity": "Simple"
+  },
+  {
+    "name": "Login Form",
+    "description": "Email and password form",
+    "code": "const LoginForm = () => {\n  return (\n    <div>\n      <input type=\"email\" placeholder=\"Email\" />\n      <input type=\"password\" placeholder=\"Password\" />\n      <button type=\"submit\">Login</button>\n    </div>\n  );\n};",
+    "complexity": "Medium"
+  },
+  {
+    "name": "Card Component",
+    "description": "Content card with title",
+    "code": "const Card = ({ title, content }) => {\n  return (\n    <div>\n      <h3>{title}</h3>\n      <p>{content}</p>\n    </div>\n  );\n};",
+    "complexity": "Simple"
+  },
+  {
+    "name": "Navigation Bar",
+    "description": "Header navigation component",
+    "code": "const NavBar = () => {\n  return (\n    <div>\n      <div>Logo</div>\n      <div>\n        <span>Home</span>\n        <span>About</span>\n        <span>Contact</span>\n      </div>\n    </div>\n  );\n};",
+    "complexity": "Medium"
+  }
+]

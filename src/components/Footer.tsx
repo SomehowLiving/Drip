@@ -54,7 +54,7 @@ export const Footer = () => {
 
         <div className="border-t border-border/50 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-sm text-muted-foreground">
-            © 2024 StyleTransformr. All rights reserved.
+            © 2025 Drip :D All rights reserved.
           </div>
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             Made with <Heart className="w-4 h-4 text-red-500" /> for developers
