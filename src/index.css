@@ -1,0 +1,494 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Enhanced React Component Styler Design System */
+
+@layer base {
+  :root {
+    /* Enhanced Color Palette with Better Contrast */
+    --background: 0 0% 98%;                /* Soft Pearl #FAFAFA */
+    --foreground: 0 0% 15%;                /* Deeper Charcoal for better contrast */
+    
+    /* Enhanced Primary Palette with Better Accessibility */
+    --primary: 225 71% 77%;                /* Muted Blue #A3BFFA */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 225 71% 85%;           /* Lighter variant */
+    --primary-dark: 225 71% 60%;           /* Enhanced contrast */
+    --primary-50: 225 71% 95%;             /* Ultra light */
+    --primary-100: 225 71% 90%;            /* Very light */
+    --primary-200: 225 71% 85%;            /* Light */
+    --primary-300: 225 71% 77%;            /* Base */
+    --primary-400: 225 71% 70%;            /* Medium */
+    --primary-500: 225 71% 60%;            /* Dark */
+    --primary-600: 225 71% 50%;            /* Darker */
+    
+    /* Enhanced Neutral System */
+    --secondary: 220 14% 96%;              /* Misty Gray #F3F4F6 */
+    --secondary-foreground: 0 0% 15%;      /* Better contrast */
+    --muted: 220 14% 94%;                  /* Slightly more contrast */
+    --muted-foreground: 0 0% 45%;          /* Improved readability */
+    
+    /* Enhanced Accent System */
+    --accent: 0 50% 92%;                   /* Powder Blush #FAD4D4 */
+    --accent-foreground: 0 0% 15%;         /* Better contrast */
+    --accent-hover: 0 50% 88%;             /* Hover state */
+    
+    /* Enhanced Warning & Status Colors */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+    
+    /* Enhanced UI Elements */
+    --card: 0 0% 100%;                     /* Pure white for cards */
+    --card-foreground: 0 0% 15%;           /* Better contrast */
+    --card-hover: 0 0% 99%;                /* Subtle hover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --destructive-hover: 0 84.2% 55%;      /* Hover state */
+    
+    /* Enhanced Border System */
+    --border: 0 0% 88%;                    /* Light Silver #E0E0E0 */
+    --border-hover: 0 0% 82%;              /* Hover state */
+    --border-focus: 225 71% 77%;           /* Focus state */
+    --input: 0 0% 96%;                     /* Lighter input background */
+    --input-border: 0 0% 88%;              /* Input border */
+    --ring: 225 71% 77%;                   /* Focus ring */
+    
+    /* Enhanced Gradients with Better Performance */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary-300)), hsl(var(--primary-200)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-50)), hsl(var(--accent) / 0.3));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--secondary) / 0.5));
+    --gradient-glass: linear-gradient(145deg, hsl(var(--card) / 0.8), hsl(var(--secondary) / 0.4));
+    --gradient-warm: linear-gradient(135deg, hsl(var(--accent) / 0.1), hsl(var(--primary-50)));
+    
+    /* Enhanced Shadow System - More Realistic */
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.08);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+    --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.15);
+    --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+    
+    /* Colored Shadows */
+    --shadow-primary: 0 4px 14px hsl(var(--primary) / 0.15);
+    --shadow-accent: 0 4px 14px hsl(var(--accent) / 0.2);
+    --shadow-success: 0 4px 14px hsl(var(--success) / 0.15);
+    --shadow-warning: 0 4px 14px hsl(var(--warning) / 0.15);
+    --shadow-destructive: 0 4px 14px hsl(var(--destructive) / 0.15);
+    
+    /* Enhanced Animation System */
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-gentle: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-spring: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Enhanced Typography */
+    --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+    
+    /* Enhanced Layout */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    
+    /* Container Widths */
+    --container-xs: 20rem;
+    --container-sm: 24rem;
+    --container-md: 28rem;
+    --container-lg: 32rem;
+    --container-xl: 36rem;
+    --container-2xl: 42rem;
+    
+    /* Sidebar Variables */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Performance Optimizations */
+    --gpu-acceleration: translateZ(0);
+    --backface-visibility: hidden;
+    --perspective: 1000px;
+  }
+
+  .dark {
+    /* Enhanced Dark Mode Colors */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --card-hover: 222.2 84% 6%;
+    
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary-glow: 217.2 91.2% 59.8%;
+    --primary-dark: 217.2 91.2% 45%;
+    
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --accent-hover: 217.2 32.6% 20%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --destructive-hover: 0 62.8% 35%;
+    
+    --border: 217.2 32.6% 17.5%;
+    --border-hover: 217.2 32.6% 20%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    
+    /* Enhanced Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary-glow)), hsl(var(--primary-dark)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-glow) / 0.1), hsl(var(--accent) / 0.1));
+    --gradient-glass: linear-gradient(145deg, hsl(var(--card) / 0.9), hsl(var(--secondary) / 0.6));
+    
+    /* Enhanced Dark Shadows */
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.4);
+    --shadow-primary: 0 10px 30px hsl(var(--primary-glow) / 0.3);
+    
+    /* Dark Sidebar */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      --transition-fast: none;
+      --transition-smooth: none;
+      --transition-gentle: none;
+      --transition-spring: none;
+      --transition-bounce: none;
+    }
+    
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  /* High Contrast Mode Support */
+  @media (prefers-contrast: high) {
+    :root {
+      --border: 0 0% 70%;
+      --muted-foreground: 0 0% 30%;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height */
+    line-height: 1.6;
+  }
+  
+  /* Enhanced Focus Styles */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+  
+  /* Better Button Reset */
+  button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font: inherit;
+  }
+  
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  /* Enhanced Input Styles */
+  input, textarea, select {
+    font: inherit;
+  }
+  
+  /* Better Image Handling */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Enhanced Table Styles */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+}
+
+@layer components {
+  /* Enhanced Button System */
+  .btn-base {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium 
+           rounded-lg transition-[var(--transition-smooth)] focus-visible:outline-none 
+           focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
+           disabled:pointer-events-none disabled:opacity-50;
+  }
+  
+  .btn-hero {
+    @apply btn-base px-8 py-4 bg-gradient-to-r from-primary-300 to-primary-200 
+           text-primary-foreground font-semibold rounded-xl shadow-[var(--shadow-primary)]
+           hover:shadow-[var(--shadow-lg)] hover:-translate-y-0.5 hover:scale-[1.02]
+           active:translate-y-0 active:scale-100 transition-[var(--transition-gentle)];
+    transform: var(--gpu-acceleration);
+  }
+  
+  .btn-secondary {
+    @apply btn-base px-6 py-3 bg-secondary text-secondary-foreground border border-border
+           rounded-xl shadow-[var(--shadow-sm)] hover:bg-card-hover hover:border-border-hover
+           hover:-translate-y-px hover:shadow-[var(--shadow-md)] active:translate-y-0;
+  }
+  
+  .btn-ghost {
+    @apply btn-base px-4 py-2 text-muted-foreground hover:text-foreground 
+           hover:bg-secondary/50 rounded-lg;
+  }
+  
+  .btn-outline {
+    @apply btn-base px-4 py-2 border border-border text-foreground
+           hover:bg-accent hover:text-accent-foreground rounded-lg;
+  }
+  
+  .btn-destructive {
+    @apply btn-base px-4 py-2 bg-destructive text-destructive-foreground
+           hover:bg-destructive-hover shadow-[var(--shadow-destructive)] rounded-lg;
+  }
+
+  /* Enhanced Card System */
+  .card-base {
+    @apply bg-card text-card-foreground border border-border rounded-xl;
+  }
+  
+  .card-elegant {
+    @apply card-base bg-gradient-to-br from-card to-secondary/20 backdrop-blur-sm
+           border-border/30 shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-lg)]
+           hover:-translate-y-1 transition-[var(--transition-gentle)] cursor-pointer;
+    transform: var(--gpu-acceleration);
+  }
+  
+  .card-feature {
+    @apply card-base p-6 sm:p-8 bg-gradient-to-br from-card to-secondary/20
+           border-border/30 rounded-2xl shadow-[var(--shadow-md)]
+           hover:shadow-[var(--shadow-xl)] hover:-translate-y-1
+           transition-[var(--transition-gentle)] cursor-pointer;
+  }
+  
+  .card-glass {
+    @apply backdrop-blur-md bg-gradient-to-br from-card/80 to-secondary/40
+           border border-border/20 rounded-xl shadow-[var(--shadow-lg)];
+  }
+
+  /* Enhanced Input System */
+  .input-base {
+    @apply w-full px-3 py-2 bg-input border border-input-border rounded-lg
+           text-foreground placeholder:text-muted-foreground
+           focus:border-border-focus focus:ring-1 focus:ring-ring
+           transition-[var(--transition-smooth)] disabled:opacity-50;
+  }
+  
+  .input-elegant {
+    @apply input-base px-4 py-3 bg-card border-border/50 rounded-xl
+           shadow-[var(--shadow-inner)] focus:shadow-[var(--shadow-primary)]
+           focus:border-primary/50;
+  }
+
+  /* Enhanced Code Editor */
+  .code-editor {
+    @apply border border-border rounded-xl overflow-hidden bg-card
+           focus-within:border-primary focus-within:shadow-[var(--shadow-primary)]
+           transition-[var(--transition-smooth)] shadow-[var(--shadow-sm)];
+  }
+  
+  .code-editor.success {
+    @apply border-success shadow-[var(--shadow-success)];
+  }
+  
+  .code-editor.error {
+    @apply border-destructive shadow-[var(--shadow-destructive)];
+  }
+  
+  .code-editor.warning {
+    @apply border-warning shadow-[var(--shadow-warning)];
+  }
+
+  /* Enhanced Utility Classes */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-500 to-accent bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-warm {
+    @apply bg-gradient-to-r from-accent to-warning bg-clip-text text-transparent;
+  }
+  
+  .breathing-space {
+    @apply py-6 px-4 sm:py-8 sm:px-6 lg:py-12 lg:px-8;
+  }
+  
+  .container-responsive {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+  
+  /* Enhanced Animation Classes */
+  .animate-fade-in {
+    animation: fadeIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  
+  .animate-bounce-gentle {
+    animation: bounceGentle 2s infinite;
+  }
+  
+  /* Enhanced Hover Effects */
+  .hover-lift {
+    @apply transition-[var(--transition-gentle)] hover:-translate-y-1 
+           hover:shadow-[var(--shadow-lg)] cursor-pointer;
+    transform: var(--gpu-acceleration);
+  }
+  
+  .hover-glow {
+    @apply transition-[var(--transition-smooth)] hover:shadow-[var(--shadow-primary)];
+  }
+  
+  .hover-scale {
+    @apply transition-[var(--transition-smooth)] hover:scale-105 cursor-pointer;
+    transform: var(--gpu-acceleration);
+  }
+  
+  /* Loading States */
+  .loading-shimmer {
+    @apply bg-gradient-to-r from-muted via-card to-muted bg-[length:200%_100%]
+           animate-pulse;
+    animation: shimmer 1.5s infinite;
+  }
+  
+  .loading-spinner {
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Responsive Typography */
+  .text-responsive-xs { @apply text-xs sm:text-sm; }
+  .text-responsive-sm { @apply text-sm sm:text-base; }
+  .text-responsive-base { @apply text-base sm:text-lg; }
+  .text-responsive-lg { @apply text-lg sm:text-xl; }
+  .text-responsive-xl { @apply text-xl sm:text-2xl; }
+  .text-responsive-2xl { @apply text-2xl sm:text-3xl; }
+  .text-responsive-3xl { @apply text-3xl sm:text-4xl lg:text-5xl; }
+  
+  /* Responsive Spacing */
+  .space-responsive { @apply space-y-4 sm:space-y-6 lg:space-y-8; }
+  .gap-responsive { @apply gap-4 sm:gap-6 lg:gap-8; }
+  .p-responsive { @apply p-4 sm:p-6 lg:p-8; }
+  .m-responsive { @apply m-4 sm:m-6 lg:m-8; }
+}
+
+/* Enhanced Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounceGentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Print Styles */
+@media print {
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+  
+  * {
+      print-color-adjust: exact !important;
+      -webkit-print-color-adjust: exact !important; /* for Safari */
+    }
+
+}
