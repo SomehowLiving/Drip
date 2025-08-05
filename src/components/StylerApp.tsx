@@ -5,6 +5,9 @@ import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
 import { Copy, Download, RefreshCw, Code, Palette, Eye, Sparkles, Play, Wand2, CheckCircle, AlertCircle } from "lucide-react";
 import React from "react";
+import transformation_rules from "./transformation_rules.json";
+import example_components from "./example_components.json";
+import style_presets from "./style_presets.json";
 
 interface DynamicPreviewProps {
   transformedCode: string;
@@ -207,181 +210,11 @@ const StaticPreview = ({ code, presetId }) => {
   );
 };
 
-const EXAMPLE_COMPONENTS = [
-  {
-    name: "Simple Button",
-    description: "Basic button component",
-    code: `const Button = ({ children }) => {
-  return <button>{children}</button>;
-};`,
-    complexity: "Simple"
-  },
-  {
-    name: "Login Form",
-    description: "Email and password form",
-    code: `const LoginForm = () => {
-  return (
-    <div>
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
-      <button type="submit">Login</button>
-    </div>
-  );
-};`,
-    complexity: "Medium"
-  },
-  {
-    name: "Card Component",
-    description: "Content card with title",
-    code: `const Card = ({ title, content }) => {
-  return (
-    <div>
-      <h3>{title}</h3>
-      <p>{content}</p>
-    </div>
-  );
-};`,
-    complexity: "Simple"
-  },
-  {
-    name: "Navigation Bar",
-    description: "Header navigation component",
-    code: `const NavBar = () => {
-  return (
-    <div>
-      <div>Logo</div>
-      <div>
-        <span>Home</span>
-        <span>About</span>
-        <span>Contact</span>
-      </div>
-    </div>
-  );
-};`,
-    complexity: "Medium"
-  }
-];
+const EXAMPLE_COMPONENTS = example_components;
 
-const STYLE_PRESETS = [
-  {
-    id: "clean",
-    name: "Clean",
-    description: "Google-inspired minimalism",
-    preview: "bg-blue-500 hover:bg-blue-600 text-white shadow-sm",
-    color: "blue",
-    popular: true,
-    tags: ["minimal", "google", "corporate"]
-  },
-  {
-    id: "soft",
-    name: "Soft",
-    description: "Gentle curves and pastel colors",
-    preview: "bg-purple-100 hover:bg-purple-200 text-purple-700 shadow-lg border border-purple-200",
-    color: "purple",
-    tags: ["friendly", "approachable", "rounded"]
-  },
-  {
-    id: "dark",
-    name: "Dark",
-    description: "Modern dark theme",
-    preview: "bg-gray-900 hover:bg-gray-800 text-white border border-gray-700",
-    color: "gray",
-    tags: ["modern", "sleek", "professional"]
-  },
-  {
-    id: "gradient",
-    name: "Gradient",
-    description: "Vibrant gradient styles",
-    preview: "bg-gradient-to-r from-orange-400 to-pink-500 text-white shadow-lg",
-    color: "gradient",
-    tags: ["vibrant", "modern", "eye-catching"]
-  },
-  {
-    id: "glass",
-    name: "Glass",
-    description: "Glassmorphism effect",
-    preview: "bg-white/20 backdrop-blur-md border border-white/30 text-gray-800 shadow-xl",
-    color: "glass",
-    tags: ["trendy", "translucent", "modern"]
-  },
-  {
-    id: "neon",
-    name: "Neon",
-    description: "Cyberpunk-inspired glow",
-    preview: "bg-black border border-cyan-400 text-cyan-400 shadow-lg shadow-cyan-400/20",
-    color: "cyan",
-    tags: ["cyberpunk", "futuristic", "glow"]
-  }
-];
+const STYLE_PRESETS = style_presets;
 
-const TRANSFORMATION_RULES = {
-  clean: {
-    button: 'className="px-6 py-3 bg-blue-500 text-white rounded-lg font-medium hover:bg-blue-600 transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"',
-    input: 'className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"',
-    div: 'className="p-6 bg-white rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"',
-    h1: 'className="text-3xl font-bold text-gray-900 mb-4"',
-    h2: 'className="text-2xl font-bold text-gray-900 mb-3"',
-    h3: 'className="text-xl font-semibold text-gray-900 mb-2"',
-    p: 'className="text-gray-600 leading-relaxed"',
-    span: 'className="text-gray-600 hover:text-blue-600 font-medium transition-colors"',
-    nav: 'className="bg-white shadow-sm border-b border-gray-200"'
-  },
-  soft: {
-    button: 'className="px-6 py-3 bg-purple-100 text-purple-700 rounded-xl font-medium hover:bg-purple-200 transition-all shadow-lg border border-purple-200"',
-    input: 'className="w-full px-4 py-3 border border-purple-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-300 bg-purple-50/50"',
-    div: 'className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg border border-purple-100"',
-    h1: 'className="text-3xl font-bold text-purple-900 mb-4"',
-    h2: 'className="text-2xl font-bold text-purple-900 mb-3"',
-    h3: 'className="text-xl font-semibold text-purple-900 mb-3"',
-    p: 'className="text-purple-700 leading-relaxed"',
-    span: 'className="text-purple-600 hover:text-purple-800 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-purple-100"',
-    nav: 'className="bg-gradient-to-r from-purple-50 to-pink-50 shadow-lg border-b border-purple-200"'
-  },
-  dark: {
-    button: 'className="px-6 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-all border border-gray-700 shadow-lg hover:shadow-xl"',
-    input: 'className="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 text-white placeholder-gray-400"',
-    div: 'className="p-6 bg-gray-900 rounded-xl shadow-xl border border-gray-700 text-white"',
-    h1: 'className="text-3xl font-bold text-white mb-4"',
-    h2: 'className="text-2xl font-bold text-white mb-3"',
-    h3: 'className="text-xl font-semibold text-white mb-2"',
-    p: 'className="text-gray-300 leading-relaxed"',
-    span: 'className="text-gray-300 hover:text-white font-medium transition-colors"',
-    nav: 'className="bg-gray-900 shadow-xl border-b border-gray-700"'
-  },
-  gradient: {
-    button: 'className="px-6 py-3 bg-gradient-to-r from-orange-400 to-pink-500 text-white rounded-lg font-semibold hover:from-orange-500 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"',
-    input: 'className="w-full px-4 py-2 border-2 border-transparent bg-gradient-to-r from-orange-100 to-pink-100 rounded-lg focus:outline-none focus:border-gradient-to-r focus:from-orange-400 focus:to-pink-500"',
-    div: 'className="p-6 bg-gradient-to-br from-orange-50 to-pink-50 rounded-xl shadow-lg border border-orange-200 hover:shadow-xl transition-all"',
-    h1: 'className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent mb-4"',
-    h2: 'className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent mb-3"',
-    h3: 'className="text-xl font-semibold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent mb-2"',
-    p: 'className="text-gray-700 leading-relaxed"',
-    span: 'className="text-orange-600 hover:text-pink-600 font-medium transition-colors"',
-    nav: 'className="bg-gradient-to-r from-orange-50 to-pink-50 shadow-lg border-b border-orange-200"'
-  },
-  glass: {
-    button: 'className="px-6 py-3 bg-white/20 backdrop-blur-md border border-white/30 text-gray-800 rounded-lg font-medium hover:bg-white/30 transition-all shadow-lg"',
-    input: 'className="w-full px-4 py-2 bg-white/20 backdrop-blur-md border border-white/30 rounded-lg focus:outline-none focus:bg-white/30 text-gray-800 placeholder-gray-600"',
-    div: 'className="p-6 bg-white/10 backdrop-blur-md rounded-xl shadow-xl border border-white/20 hover:bg-white/20 transition-all"',
-    h1: 'className="text-3xl font-bold text-gray-800 mb-4"',
-    h2: 'className="text-2xl font-bold text-gray-800 mb-3"',
-    h3: 'className="text-xl font-semibold text-gray-800 mb-2"',
-    p: 'className="text-gray-700 leading-relaxed"',
-    span: 'className="text-gray-700 hover:text-gray-900 font-medium transition-colors"',
-    nav: 'className="bg-white/10 backdrop-blur-md shadow-xl border-b border-white/20"'
-  },
-  neon: {
-    button: 'className="px-6 py-3 bg-black border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all shadow-lg shadow-cyan-400/20 hover:shadow-cyan-400/40"',
-    input: 'className="w-full px-4 py-2 bg-black border border-cyan-400 rounded-lg focus:outline-none focus:shadow-lg focus:shadow-cyan-400/20 text-cyan-400 placeholder-cyan-600"',
-    div: 'className="p-6 bg-black rounded-xl shadow-xl border border-cyan-400 shadow-cyan-400/10 hover:shadow-cyan-400/20 transition-all"',
-    h1: 'className="text-3xl font-bold text-cyan-400 mb-4"',
-    h2: 'className="text-2xl font-bold text-cyan-400 mb-3"',
-    h3: 'className="text-xl font-semibold text-cyan-400 mb-2"',
-    p: 'className="text-cyan-300 leading-relaxed"',
-    span: 'className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors hover:shadow-lg hover:shadow-cyan-400/20"',
-    nav: 'className="bg-black shadow-xl border-b border-cyan-400 shadow-cyan-400/10"'
-  }
-};
+const TRANSFORMATION_RULES = transformation_rules;
 
 export default function StylerApp() {
   const [inputCode, setInputCode] = useState('');
